@@ -74,6 +74,9 @@ function renderProducts() {
     productsData.forEach(product => {
         const card = document.createElement('div');
         card.className = 'product-card';
+        card.addEventListener('click', () => {
+            window.location.href = `produto.html?id=${product.id}`;
+        });
         card.innerHTML = `
             <img src="${product.image}" class="product-img" alt="${product.title}">
             <div class="product-info">
