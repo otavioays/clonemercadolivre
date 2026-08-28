@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto | Mercado Livre Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="produto.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="product-page">
+    <header class="main-header product-header">
+        <div class="header-container">
+            <div class="header-top">
+                <a class="logo product-logo" href="index.html" aria-label="Voltar para a página inicial">
+                    <span class="logo-ml">Mercado</span><span class="logo-lv">Livre</span>
+                </a>
+
+                <div class="search-bar product-search">
+                    <div class="search-input-wrapper">
+                        <input type="text" placeholder="Buscar produtos, marcas e muito mais...">
+                    </div>
+                    <button class="search-btn" aria-label="Buscar">
+                        <i data-lucide="search"></i>
+                    </button>
+                </div>
+
+                <div class="meli-demo">meli+ <span>Benefícios exclusivos</span></div>
+            </div>
+
+            <div class="header-bottom product-header-bottom">
+                <div class="location">
+                    <i data-lucide="map-pin"></i>
+                    <span>Enviar para <strong>São Paulo 01001-000</strong></span>
+                </div>
+                <nav class="nav-links product-nav">
+                    <a href="#">Categorias</a>
+                    <a href="#">Ofertas</a>
+                    <a href="#">Cupons</a>
+                    <a href="#">Supermercado</a>
+                    <a href="#">Moda</a>
+                    <a href="#">Vender</a>
+                    <a href="#">Contato</a>
+                </nav>
+                <div class="product-user-links">
+                    <span>Minha conta</span>
+                    <span>Compras</span>
+                    <span>Favoritos</span>
+                    <i data-lucide="shopping-cart"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="product-main">
+        <div class="interest-line">Você também pode estar interessado: ofertas de tecnologia, eletrônicos e acessórios</div>
+
+        <div class="product-top-links">
+            <div class="breadcrumbs">
+                <a href="index.html">Voltar à lista</a>
+                <span>›</span>
+                <a href="#">Tecnologia</a>
+                <span>›</span>
+                <a href="#">Eletrônicos</a>
+                <span>›</span>
+                <span id="breadcrumb-product">Produto</span>
+            </div>
+            <div class="top-actions">
+                <a href="#">Vender um igual</a>
+                <span>|</span>
+                <a href="#">Compartilhar</a>
+            </div>
+        </div>
+
+        <section class="product-shell">
+            <div class="product-left-column">
+                <div class="gallery-layout">
+                    <div class="thumbs" id="product-thumbs"></div>
+                    <div class="main-image-wrap">
+                        <img id="product-main-image" src="" alt="Produto" class="main-product-image">
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-center-column">
+                <div class="store-line">
+                    <span class="store-avatar">ML</span>
+                    <a href="#">Acesse a Loja Oficial</a>
+                    <i data-lucide="badge-check"></i>
+                </div>
+
+                <div class="condition-row">Novo <span>|</span> +1000 vendidos</div>
+
+                <div class="ranking-row">
+                    <span class="best-seller">MAIS VENDIDO</span>
+                    <span>5º em Tecnologia</span>
+                </div>
+
+                <div class="title-row">
+                    <h1 id="product-title">Produto</h1>
+                    <button class="heart-btn" aria-label="Favoritar"><i data-lucide="heart"></i></button>
+                </div>
+
+                <div class="rating-row">
+                    <span>4.8</span>
+                    <span class="stars">★★★★★</span>
+                    <span>(2507)</span>
+                </div>
+
+                <div class="product-price-block">
+                    <div class="product-big-price" id="product-price">R$ 0</div>
+                    <div class="product-installment" id="product-installments">12x sem juros</div>
+                    <a href="#">Ver os meios de pagamento</a>
+                </div>
+
+                <a class="coupon-link" href="#">Ver cupons disponíveis</a>
+
+                <div class="variant-section">
+                    <div class="variant-title">Cor: <strong>Modelo principal</strong></div>
+                    <div class="variant-options" id="variant-options"></div>
+                </div>
+
+                <div class="variant-section">
+                    <div class="variant-title">Armazenamento: <strong>Escolha</strong></div>
+                    <div class="storage-options">
+                        <button class="option-btn active">256 GB</button>
+                        <button class="option-btn">512 GB</button>
+                    </div>
+                </div>
+
+                <div class="product-facts">
+                    <h3>O que você precisa saber sobre este produto</h3>
+                    <ul>
+                        <li>Produto novo com excelente avaliação e alta procura.</li>
+                        <li>Design moderno, desempenho confiável e acabamento premium.</li>
+                        <li>Compra protegida e suporte durante todo o processo.</li>
+                    </ul>
+                    <a href="#">Ver características</a>
+                </div>
+            </div>
+
+            <aside class="purchase-card">
+                <div class="delivery-alert">
+                    <i data-lucide="alert-circle"></i>
+                    <span>Por enquanto, não podemos fazer envios para essa localização.</span>
+                </div>
+
+                <h3>Estoque disponível</h3>
+                <div class="quantity-line">Quantidade: <strong>1 unidade</strong> <i data-lucide="chevron-down"></i></div>
+
+                <button class="buy-btn">Comprar agora</button>
+                <button class="cart-btn" id="product-add-cart"><i data-lucide="shopping-cart"></i> Adicionar ao carrinho</button>
+
+                <div class="seller-block">
+                    <div class="seller-avatar">ML</div>
+                    <div>
+                        <div>Loja oficial</div>
+                        <a href="#">VENDEDOR OFICIAL</a>
+                        <strong>+250 mil vendas</strong>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <i data-lucide="undo-2"></i>
+                    <div><a href="#">Devolução grátis.</a> Você tem 30 dias a partir da data de recebimento.</div>
+                </div>
+
+                <div class="benefit-item">
+                    <i data-lucide="shield-check"></i>
+                    <div><a href="#">Compra Garantida.</a> Receba o produto que está esperando ou devolvemos o dinheiro.</div>
+                </div>
+
+                <div class="list-link"><i data-lucide="list-plus"></i> Adicionar a uma lista</div>
+            </aside>
+        </section>
+
+        <section class="detail-panel">
+            <h2>Descrição do produto</h2>
+            <p id="product-description">Produto selecionado da nossa vitrine demonstrativa.</p>
+        </section>
+    </main>
+
+    <footer class="product-disclaimer">
+        Projeto demonstrativo de interface. Não possui vínculo oficial com o Mercado Livre.
+    </footer>
+
+    <script src="produto.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
