@@ -1,190 +1,91 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produto | Mercado Livre Clone</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="produto.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Produto | Marketplace Clone</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;padding:0;font-family:Arial,Helvetica,sans-serif;color:#222}body{background:#ededed}a{color:#3483fa;text-decoration:none}button{font:inherit}.demo-strip{background:#1f1f1f;color:#fff;text-align:center;padding:7px 12px;font-size:12px}.header{background:#ffe600;border-bottom:1px solid rgba(0,0,0,.08)}.header-inner{max-width:1180px;margin:auto;padding:10px 18px 8px}.top{display:grid;grid-template-columns:150px minmax(320px,540px) 1fr;gap:20px;align-items:center}.logo{font-weight:800;font-size:22px;line-height:.9;color:#2d3277;display:flex;align-items:center;gap:7px}.logo-mark{width:43px;height:29px;border:2px solid #2d3277;border-radius:50%;display:grid;place-items:center;font-size:18px;background:#ffe600}.search{height:40px;background:#fff;display:flex;box-shadow:0 1px 2px rgba(0,0,0,.18);border-radius:2px;overflow:hidden}.search input{flex:1;border:0;outline:0;padding:0 15px;font-size:15px}.search button{width:46px;border:0;border-left:1px solid #eee;background:#fff;color:#777;cursor:pointer}.meli{justify-self:end;background:#fff;border-radius:18px;padding:6px 18px;color:#8d1fae;font-weight:800;font-size:17px;min-width:245px;text-align:center}.meli small{color:#222;font-size:10px;font-weight:600;margin-left:6px}.bottom{display:grid;grid-template-columns:150px 1fr auto;gap:20px;align-items:end;margin-top:7px;font-size:13px}.ship{display:flex;gap:6px;align-items:center;line-height:1.05}.ship span{font-size:11px;color:#555}.ship strong{display:block;color:#222;font-size:12px}.nav{display:flex;gap:17px;align-items:center;flex-wrap:wrap}.nav a,.account a{color:#222}.account{display:flex;gap:16px;align-items:center;white-space:nowrap}.main{max-width:1180px;margin:auto;padding:16px 18px 50px}.interest{font-size:13px;margin:4px 0 20px}.prelinks{display:flex;justify-content:space-between;gap:20px;font-size:13px;margin-bottom:12px}.crumbs,.actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.panel{background:#fff;border:1px solid #ddd;border-radius:7px;display:grid;grid-template-columns:430px minmax(330px,1fr) 305px;gap:24px;padding:22px;min-height:630px}.gallery{display:grid;grid-template-columns:56px 1fr;gap:18px}.thumbs{display:flex;flex-direction:column;gap:9px}.thumb{width:52px;height:52px;border:1px solid #cfcfcf;background:#fff;border-radius:5px;padding:3px;cursor:pointer}.thumb.active{border:2px solid #3483fa}.thumb img{width:100%;height:100%;object-fit:contain}.main-img-box{display:flex;align-items:flex-start;justify-content:center;padding-top:15px;min-height:560px}.main-img{width:100%;height:520px;object-fit:contain}.store{display:flex;align-items:center;gap:7px;font-size:13px;margin:3px 0 16px}.store-dot{width:25px;height:25px;border-radius:50%;background:#f1f1f1;display:grid;place-items:center;font-size:9px;font-weight:700;color:#555}.condition{color:#777;font-size:13px;margin-bottom:15px}.tagline{display:flex;align-items:center;gap:7px;font-size:12px;color:#3483fa;margin-bottom:8px}.tag{background:#ff7738;color:#fff;font-size:11px;font-weight:700;padding:4px 6px;border-radius:2px}.titleline{display:flex;align-items:flex-start;gap:10px}.titleline h1{font-size:24px;line-height:1.18;margin:0;font-weight:600}.heart{margin-left:auto;border:0;background:none;color:#3483fa;font-size:28px;cursor:pointer}.rating{display:flex;align-items:center;gap:6px;font-size:13px;color:#777;margin:12px 0 18px}.stars{color:#3483fa;letter-spacing:1px}.price{font-size:38px;font-weight:300;line-height:1;margin-top:7px}.installments{font-size:14px;margin:8px 0 6px}.paylink{font-size:13px}.coupon{display:inline-block;margin:28px 0 25px;font-size:13px;font-weight:600}.variant-title{font-size:15px;margin:0 0 9px}.variant-row{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap}.variant{width:48px;height:48px;border:1px solid #ccc;background:#fff;border-radius:6px;padding:3px;cursor:pointer}.variant.active{border:2px solid #3483fa}.variant img{width:100%;height:100%;object-fit:contain}.choice{border:1px solid #ccc;background:#fff;border-radius:6px;padding:9px 13px;cursor:pointer}.choice.active{border-color:#3483fa;color:#3483fa}.facts{margin-top:27px}.facts h3{font-size:15px;margin:0 0 13px}.facts ul{padding-left:18px;margin:0 0 12px}.facts li{font-size:13px;line-height:1.5;margin-bottom:7px}.buybox{border:1px solid #ddd;border-radius:8px;padding:15px;height:max-content}.alert{display:flex;gap:10px;background:#f5f5f5;border-left:4px solid #ff7738;padding:14px 12px;border-radius:5px;font-size:13px;line-height:1.35;margin:7px 0 23px}.alert-ico{color:#ff7738;font-weight:800;font-size:18px}.buybox h3{font-size:16px;margin:0 0 12px}.qty{font-size:14px;margin-bottom:24px}.qty span{color:#3483fa}.buybtn,.cartbtn{width:100%;height:43px;border:0;border-radius:5px;font-weight:600;cursor:pointer}.buybtn{background:#3483fa;color:#fff;margin-bottom:9px}.cartbtn{background:#e3edfb;color:#3483fa}.seller{display:grid;grid-template-columns:44px 1fr;gap:10px;margin:24px 0}.seller-logo{width:42px;height:42px;border-radius:50%;background:#f2f2f2;display:grid;place-items:center;font-size:10px;font-weight:700}.seller div{font-size:13px;line-height:1.35}.seller strong{display:block}.benefit{display:grid;grid-template-columns:18px 1fr;gap:8px;font-size:12px;color:#777;line-height:1.45;margin:17px 0}.benefit-ico{font-size:16px}.list-link{font-size:13px;margin-top:22px}.description{background:#fff;border:1px solid #ddd;border-radius:7px;padding:28px;margin-top:18px}.description h2{font-size:22px;font-weight:500;margin:0 0 14px}.description p{color:#666;line-height:1.6;margin:0}.footer{text-align:center;background:#fff;border-top:1px solid #ddd;color:#777;padding:22px;font-size:12px;margin-top:30px}.toast{position:fixed;right:20px;bottom:20px;background:#333;color:#fff;padding:12px 16px;border-radius:6px;font-size:13px;opacity:0;transform:translateY(10px);pointer-events:none;transition:.2s}.toast.show{opacity:1;transform:none}@media(max-width:1000px){.top{grid-template-columns:130px 1fr}.meli{display:none}.bottom{grid-template-columns:1fr}.account{display:none}.panel{grid-template-columns:1fr}.gallery{max-width:600px;margin:auto}.main-img-box{min-height:400px}.main-img{height:380px}.buybox{max-width:520px}.prelinks .actions{display:none}}@media(max-width:620px){.header-inner,.main{padding-left:10px;padding-right:10px}.top{grid-template-columns:1fr}.logo{margin-bottom:3px}.search{width:100%}.nav{gap:11px;overflow-x:auto;flex-wrap:nowrap}.panel{padding:13px;gap:14px}.gallery{grid-template-columns:1fr}.thumbs{flex-direction:row;overflow-x:auto}.main-img-box{min-height:300px}.main-img{height:290px}.titleline h1{font-size:21px}.price{font-size:34px}.interest{display:none}}
+</style>
 </head>
-<body class="product-page">
-    <header class="main-header product-header">
-        <div class="header-container">
-            <div class="header-top">
-                <a class="logo product-logo" href="index.html" aria-label="Voltar para a página inicial">
-                    <span class="logo-ml">Mercado</span><span class="logo-lv">Livre</span>
-                </a>
-
-                <div class="search-bar product-search">
-                    <div class="search-input-wrapper">
-                        <input type="text" placeholder="Buscar produtos, marcas e muito mais...">
-                    </div>
-                    <button class="search-btn" aria-label="Buscar">
-                        <i data-lucide="search"></i>
-                    </button>
-                </div>
-
-                <div class="meli-demo">meli+ <span>Benefícios exclusivos</span></div>
-            </div>
-
-            <div class="header-bottom product-header-bottom">
-                <div class="location">
-                    <i data-lucide="map-pin"></i>
-                    <span>Enviar para <strong>São Paulo 01001-000</strong></span>
-                </div>
-                <nav class="nav-links product-nav">
-                    <a href="#">Categorias</a>
-                    <a href="#">Ofertas</a>
-                    <a href="#">Cupons</a>
-                    <a href="#">Supermercado</a>
-                    <a href="#">Moda</a>
-                    <a href="#">Vender</a>
-                    <a href="#">Contato</a>
-                </nav>
-                <div class="product-user-links">
-                    <span>Minha conta</span>
-                    <span>Compras</span>
-                    <span>Favoritos</span>
-                    <i data-lucide="shopping-cart"></i>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <main class="product-main">
-        <div class="interest-line">Você também pode estar interessado: ofertas de tecnologia, eletrônicos e acessórios</div>
-
-        <div class="product-top-links">
-            <div class="breadcrumbs">
-                <a href="index.html">Voltar à lista</a>
-                <span>›</span>
-                <a href="#">Tecnologia</a>
-                <span>›</span>
-                <a href="#">Eletrônicos</a>
-                <span>›</span>
-                <span id="breadcrumb-product">Produto</span>
-            </div>
-            <div class="top-actions">
-                <a href="#">Vender um igual</a>
-                <span>|</span>
-                <a href="#">Compartilhar</a>
-            </div>
-        </div>
-
-        <section class="product-shell">
-            <div class="product-left-column">
-                <div class="gallery-layout">
-                    <div class="thumbs" id="product-thumbs"></div>
-                    <div class="main-image-wrap">
-                        <img id="product-main-image" src="" alt="Produto" class="main-product-image">
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-center-column">
-                <div class="store-line">
-                    <span class="store-avatar">ML</span>
-                    <a href="#">Acesse a Loja Oficial</a>
-                    <i data-lucide="badge-check"></i>
-                </div>
-
-                <div class="condition-row">Novo <span>|</span> +1000 vendidos</div>
-
-                <div class="ranking-row">
-                    <span class="best-seller">MAIS VENDIDO</span>
-                    <span>5º em Tecnologia</span>
-                </div>
-
-                <div class="title-row">
-                    <h1 id="product-title">Produto</h1>
-                    <button class="heart-btn" aria-label="Favoritar"><i data-lucide="heart"></i></button>
-                </div>
-
-                <div class="rating-row">
-                    <span>4.8</span>
-                    <span class="stars">★★★★★</span>
-                    <span>(2507)</span>
-                </div>
-
-                <div class="product-price-block">
-                    <div class="product-big-price" id="product-price">R$ 0</div>
-                    <div class="product-installment" id="product-installments">12x sem juros</div>
-                    <a href="#">Ver os meios de pagamento</a>
-                </div>
-
-                <a class="coupon-link" href="#">Ver cupons disponíveis</a>
-
-                <div class="variant-section">
-                    <div class="variant-title">Cor: <strong>Modelo principal</strong></div>
-                    <div class="variant-options" id="variant-options"></div>
-                </div>
-
-                <div class="variant-section">
-                    <div class="variant-title">Armazenamento: <strong>Escolha</strong></div>
-                    <div class="storage-options">
-                        <button class="option-btn active">256 GB</button>
-                        <button class="option-btn">512 GB</button>
-                    </div>
-                </div>
-
-                <div class="product-facts">
-                    <h3>O que você precisa saber sobre este produto</h3>
-                    <ul>
-                        <li>Produto novo com excelente avaliação e alta procura.</li>
-                        <li>Design moderno, desempenho confiável e acabamento premium.</li>
-                        <li>Compra protegida e suporte durante todo o processo.</li>
-                    </ul>
-                    <a href="#">Ver características</a>
-                </div>
-            </div>
-
-            <aside class="purchase-card">
-                <div class="delivery-alert">
-                    <i data-lucide="alert-circle"></i>
-                    <span>Por enquanto, não podemos fazer envios para essa localização.</span>
-                </div>
-
-                <h3>Estoque disponível</h3>
-                <div class="quantity-line">Quantidade: <strong>1 unidade</strong> <i data-lucide="chevron-down"></i></div>
-
-                <button class="buy-btn">Comprar agora</button>
-                <button class="cart-btn" id="product-add-cart"><i data-lucide="shopping-cart"></i> Adicionar ao carrinho</button>
-
-                <div class="seller-block">
-                    <div class="seller-avatar">ML</div>
-                    <div>
-                        <div>Loja oficial</div>
-                        <a href="#">VENDEDOR OFICIAL</a>
-                        <strong>+250 mil vendas</strong>
-                    </div>
-                </div>
-
-                <div class="benefit-item">
-                    <i data-lucide="undo-2"></i>
-                    <div><a href="#">Devolução grátis.</a> Você tem 30 dias a partir da data de recebimento.</div>
-                </div>
-
-                <div class="benefit-item">
-                    <i data-lucide="shield-check"></i>
-                    <div><a href="#">Compra Garantida.</a> Receba o produto que está esperando ou devolvemos o dinheiro.</div>
-                </div>
-
-                <div class="list-link"><i data-lucide="list-plus"></i> Adicionar a uma lista</div>
-            </aside>
-        </section>
-
-        <section class="detail-panel">
-            <h2>Descrição do produto</h2>
-            <p id="product-description">Produto selecionado da nossa vitrine demonstrativa.</p>
-        </section>
-    </main>
-
-    <footer class="product-disclaimer">
-        Projeto demonstrativo de interface. Não possui vínculo oficial com o Mercado Livre.
-    </footer>
-
-    <script src="produto.js"></script>
-    <script>lucide.createIcons();</script>
+<body>
+<div class="demo-strip">DEMONSTRAÇÃO DE INTERFACE — este site não é o Mercado Livre e não processa compras ou pagamentos.</div>
+<header class="header">
+  <div class="header-inner">
+    <div class="top">
+      <a class="logo" href="index.html"><span class="logo-mark">↔</span><span>mercado<br>livre</span></a>
+      <div class="search"><input type="text" placeholder="Buscar produtos, marcas e muito mais..."><button aria-label="Buscar">⌕</button></div>
+      <div class="meli">meli+ <small>benefícios exclusivos</small></div>
+    </div>
+    <div class="bottom">
+      <div class="ship"><b>⌖</b><div><span>Enviar para</span><strong>São Paulo 01001-000</strong></div></div>
+      <nav class="nav"><a href="#">Categorias⌄</a><a href="#">Ofertas</a><a href="#">Cupons</a><a href="#">Supermercado</a><a href="#">Moda</a><a href="#">Mercado Play</a><a href="#">Vender</a><a href="#">Contato</a></nav>
+      <div class="account"><a href="#">Minha conta⌄</a><a href="#">Compras</a><a href="#">Favoritos⌄</a><span>♡</span><span>🛒</span></div>
+    </div>
+  </div>
+</header>
+<main class="main">
+  <div class="interest">Você também pode estar interessado: ofertas de tecnologia, eletrônicos, smartphones, computadores e acessórios</div>
+  <div class="prelinks">
+    <div class="crumbs"><a href="index.html">Voltar à lista</a><span>|</span><a href="#">Tecnologia</a><span>›</span><a href="#">Eletrônicos</a><span>›</span><span id="crumb">Produto</span></div>
+    <div class="actions"><a href="#">Vender um igual</a><span>|</span><a href="#">Compartilhar</a></div>
+  </div>
+  <section class="panel">
+    <div class="gallery">
+      <div class="thumbs" id="thumbs"></div>
+      <div class="main-img-box"><img class="main-img" id="mainImage" alt="Produto"></div>
+    </div>
+    <div class="info">
+      <div class="store"><span class="store-dot">LOJA</span><a href="#">Acesse a Loja Oficial</a><span style="color:#3483fa">●</span></div>
+      <div class="condition">Novo &nbsp;|&nbsp; +1000 vendidos</div>
+      <div class="tagline"><span class="tag">MAIS VENDIDO</span><span>5º em Tecnologia</span></div>
+      <div class="titleline"><h1 id="title">Produto</h1><button class="heart">♡</button></div>
+      <div class="rating"><span>4.8</span><span class="stars">★★★★★</span><span>(2507)</span></div>
+      <div class="price" id="price">R$ 0</div>
+      <div class="installments" id="installments">12x sem juros</div>
+      <a class="paylink" href="#">Ver os meios de pagamento</a><br>
+      <a class="coupon" href="#">Ver cupons disponíveis</a>
+      <p class="variant-title">Cor: <strong>Modelo principal</strong></p>
+      <div class="variant-row" id="variants"></div>
+      <p class="variant-title">Versão: <strong>Escolha</strong></p>
+      <div class="variant-row"><button class="choice active">Padrão</button><button class="choice">Premium</button></div>
+      <div class="facts"><h3>O que você precisa saber sobre este produto</h3><ul><li>Produto novo com excelente avaliação e alta procura.</li><li>Acabamento moderno e especificações voltadas para uso diário.</li><li>Compra protegida dentro desta demonstração de interface.</li></ul><a href="#">Ver características</a></div>
+    </div>
+    <aside class="buybox">
+      <div class="alert"><span class="alert-ico">!</span><span>Por enquanto, não podemos fazer envios para essa localização.</span></div>
+      <h3>Estoque disponível</h3>
+      <div class="qty">Quantidade: <strong>1 unidade</strong> <span>⌄</span></div>
+      <button class="buybtn" id="buyBtn">Comprar agora</button>
+      <button class="cartbtn" id="cartBtn">🛒 &nbsp; Adicionar ao carrinho</button>
+      <div class="seller"><div class="seller-logo">LOJA</div><div>Loja oficial<br>Vendido por <a href="#">VENDEDOR OFICIAL</a><strong>+250 mil vendas</strong></div></div>
+      <div class="benefit"><span class="benefit-ico">↩</span><div><a href="#">Devolução grátis.</a> Você tem 30 dias a partir da data de recebimento.</div></div>
+      <div class="benefit"><span class="benefit-ico">♢</span><div><a href="#">Compra Garantida.</a> Receba o produto esperado ou tenha proteção na compra.</div></div>
+      <div class="list-link"><a href="#">☷ &nbsp; Adicionar a uma lista</a></div>
+    </aside>
+  </section>
+  <section class="description"><h2>Descrição do produto</h2><p id="description"></p></section>
+</main>
+<footer class="footer">Projeto demonstrativo de UI. Não possui vínculo oficial com o Mercado Livre.</footer>
+<div class="toast" id="toast"></div>
+<script>
+const products=[
+{id:1,title:'Apple iPad Air M2 256GB Wi-Fi Space Gray',price:6499,installments:'10x R$ 649,90',image:'https://images.pexels.com/photos/25809226/pexels-photo-25809226.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'},
+{id:2,title:'iPhone 15 Pro Max 256GB Titânio Natural',price:8299,installments:'10x R$ 829,90',image:'https://images.pexels.com/photos/22307556/pexels-photo-22307556.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'},
+{id:3,title:'Kit Apple Studio Display + Magic Keyboard',price:12400,installments:'12x R$ 1.033,33',image:'https://images.pexels.com/photos/14541063/pexels-photo-14541063.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'},
+{id:4,title:'Smartphone Samsung Galaxy S24 Ultra 512GB',price:5800,installments:'10x R$ 580,00',image:'https://images.pexels.com/photos/7190928/pexels-photo-7190928.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'},
+{id:5,title:'MacBook Pro M3 Max 14 polegadas 36GB RAM',price:21000,installments:'10x R$ 2.100,00',image:'https://images.pexels.com/photos/12935040/pexels-photo-12935040.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'},
+{id:6,title:'Console PlayStation 5 Slim Digital Edition',price:3400,installments:'10x R$ 340,00',image:'https://images.pexels.com/photos/17565491/pexels-photo-17565491.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'},
+{id:7,title:'Fone de Ouvido Sony WH-1000XM5 Noise Cancelling',price:1800,installments:'10x R$ 180,00',image:'https://images.pexels.com/photos/34629890/pexels-photo-34629890.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'},
+{id:8,title:'Smartwatch Apple Watch Series 9 Aluminum',price:2900,installments:'10x R$ 290,00',image:'https://images.pexels.com/photos/6214388/pexels-photo-6214388.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'}
+];
+const params=new URLSearchParams(location.search);const id=parseInt(params.get('id')||'1',10);const product=products.find(p=>p.id===id)||products[0];
+const brl=n=>n.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+document.title=product.title+' | Marketplace Clone';document.getElementById('title').textContent=product.title;document.getElementById('crumb').textContent=product.title;document.getElementById('price').textContent=brl(product.price);document.getElementById('installments').textContent=product.installments;document.getElementById('mainImage').src=product.image;document.getElementById('mainImage').alt=product.title;document.getElementById('description').textContent=product.title+' em uma página demonstrativa de marketplace, com galeria, preço, parcelamento, informações do vendedor e opções visuais de compra.';
+const thumbs=document.getElementById('thumbs');const variants=document.getElementById('variants');
+for(let i=0;i<6;i++){const b=document.createElement('button');b.className='thumb'+(i===0?' active':'');b.innerHTML='<img src="'+product.image+'" alt="Miniatura '+(i+1)+'">';b.onclick=()=>{document.querySelectorAll('.thumb').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById('mainImage').src=product.image};thumbs.appendChild(b)}
+for(let i=0;i<2;i++){const b=document.createElement('button');b.className='variant'+(i===0?' active':'');b.innerHTML='<img src="'+product.image+'" alt="Variação">';b.onclick=()=>{document.querySelectorAll('.variant').forEach(x=>x.classList.remove('active'));b.classList.add('active')};variants.appendChild(b)}
+document.querySelectorAll('.choice').forEach(b=>b.onclick=()=>{document.querySelectorAll('.choice').forEach(x=>x.classList.remove('active'));b.classList.add('active')});
+const toast=document.getElementById('toast');function showToast(t){toast.textContent=t;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1800)}document.getElementById('cartBtn').onclick=()=>showToast('Produto adicionado ao carrinho demonstrativo');document.getElementById('buyBtn').onclick=()=>showToast('Compra desativada nesta demonstração');
+</script>
 </body>
 </html>
